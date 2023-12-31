@@ -1,0 +1,46 @@
+@import "../../styles//partials/fonts";
+@import "../../styles//partials/variables";
+
+
+.video-thumbnails-section--h3 {
+
+    color: gray;
+    margin: 16px;
+}
+
+h1 {
+
+    font-size: $page-header-text-size-mobile;
+    line-height: $page-header-line-height-mobile;
+    font-weight: $page-header-text-weight-mobile;
+    font-family: "AvenirBold";
+}
+
+h2 {
+
+    font-size: $subheader-text-size-mobile;
+    line-height: $subheader-line-height-mobile;
+    font-weight: $subheader-text-weight-mobile;
+    font-family: "AvenirDemi";
+}
+
+h3 {
+
+    font-size: $subheader-text-size-mobile;
+    line-height: $subheader-line-height-mobile;
+    font-weight: 100;
+    font-family: "Avenir";
+}
+
+p {
+
+    font-size: $body-copy-text-size-mobile;
+    line-height: $body-copy-line-height-mobile;
+    font-weight: $body-copy-text-weight-mobile;
+    font-family: "Avenir";
+}
+
+button {
+
+    background-color: $brainflix-blue;
+}

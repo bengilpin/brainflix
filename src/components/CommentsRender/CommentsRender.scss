@@ -1,0 +1,73 @@
+.comment-form {
+    display: flex;
+    width: 100vw;
+    padding: 0px 16px 16px 16px;
+
+    &__profilePic {
+
+        height:36px;
+        width:36px;
+        border-radius: 50%;
+        margin: 8px 16px 0 0;
+        
+
+    }
+
+    &__content {
+
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        
+
+        &__inner {
+            width: 100%;
+
+            h2 {
+
+                color: silver;
+                padding-bottom: 0;
+                margin-bottom: 8px;
+                font-weight: 100;
+            }
+
+            input {
+
+                padding-left: 16px;
+                height: 120px;
+                width: 100%;
+                border-radius: 5px;
+                border: 1px #E1E1E1 solid;
+                background-color: #FAFAFA;
+            }
+        }
+
+        &__button-container {
+            padding-top: 16px;
+            position: relative;
+            
+
+            img {
+
+                position: absolute;
+                top: 43%;
+                left: 3%;
+            }
+
+            button {
+
+                height: 40px;
+                width: 100%;
+                border-radius: 5px;
+                background-color: #0095FF;
+                color: white;
+                border-color: #0095FF;
+                
+                
+            }
+        }
+    }
+
+
+}
