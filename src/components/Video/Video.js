@@ -8,8 +8,7 @@ function Video({ selectedVideo }) {
       {selectedVideo ? (
         <video
           className="video-container--video"
-          width="100%"
-          height="auto"
+          
           poster={selectedVideo.image}
           controls
           

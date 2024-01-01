@@ -5,7 +5,11 @@
 .video-thumbnails-section--h3 {
 
     color: gray;
-    margin: 16px;
+    margin: 1rem;
+
+    @media (min-width: 48rem) {
+        margin: 2.25rem;
+    }
 }
 
 h1 {
@@ -14,6 +18,7 @@ h1 {
     line-height: $page-header-line-height-mobile;
     font-weight: $page-header-text-weight-mobile;
     font-family: "AvenirBold";
+    color: $brainflix-black;
 }
 
 h2 {
@@ -44,3 +49,62 @@ button {
 
     background-color: $brainflix-blue;
 }
+
+@media (min-width: 48rem) {
+
+    h1 {
+
+        font-size: $page-header-text-size-desktop;
+        line-height: $page-header-line-height-desktop;
+        font-weight: $page-header-text-weight-desktop;
+        font-family: "AvenirBold";
+    }
+    
+    h2 {
+    
+        font-size: $subheader-text-size-desktop;
+        line-height: $subheader-line-height-desktop;
+        font-weight: $subheader-text-weight-desktop;
+        font-family: "AvenirDemi";
+    }
+    
+    h3 {
+    
+        font-size: $subheader-text-size-desktop;
+        line-height: $subheader-line-height-desktop;
+        font-weight: 100;
+        font-family: "Avenir";
+    }
+    
+    p {
+    
+        font-size: $body-copy-text-size-desktop;
+        line-height: $body-copy-line-height-desktop;
+        font-weight: $body-copy-text-weight-desktop;
+        font-family: "Avenir";
+    }
+    
+
+}
+
+@media (min-width: 80rem) {
+    .desktop__container {
+
+        display: flex;
+
+        &--leftside {
+
+            width: 65vw;
+        }
+    }      
+    
+    .video-thumbail__container {
+
+        display: flex;
+        flex-direction: column;
+        border-left: .0625rem #f1f1f1 solid;
+        width: 35vw;
+        
+    }
+}
+

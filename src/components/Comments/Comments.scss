@@ -1,21 +1,41 @@
 .comment-card {
 
     display: flex;
-    
-    margin: 16px;
-    padding-bottom: 16px;
-    border-bottom: 1px lightgray solid;
+
+    margin: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: .0625rem lightgray solid;
+
+    @media (min-width: 48rem) {
+
+        margin: 2.25rem;
+
+        @media (min-width: 80rem) {
+            margin: 2.25rem 0rem 2.25rem 8rem;
+            width: 58vw;
+            margin-right: 0;
+            padding-right: 2.25rem;
+            flex-grow: 1;
+        }
+    }
+
 
     &--image {
 
-        height: 36px;
-        width: 36px;
-        margin-top: 8px;
-        padding-right: 16px;
-        margin-right: 16px;
+        height: 2.25rem;
+        width: 2.25rem;
+        margin-top: .5rem;
+        padding-right: 1rem;
+        margin-right: 1rem;
         border-radius: 50%;
         background-color: #e1e1e1;
         flex-shrink: 0;
+
+        @media (min-width: 48rem) {
+            margin-top: 0;
+            height: 2.5rem;
+            width: 2.5rem;
+        }
     }
 
     &__content {
@@ -23,10 +43,42 @@
         display: flex;
         flex-direction: column;
 
+        &--comment {
+
+            @media (min-width: 80rem) {
+                width: 63.8125rem;
+                
+
+                p {
+
+                    white-space: wrap;
+
+                }
+            }
+        }
+
         &--header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
+
+            @media (min-width: 48rem) {
+                align-items: flex-start;
+                margin-bottom: 0;
+
+                h2,
+                h3 {
+
+                    margin: 0;
+                    font-size: 1.25rem;
+                }
+
+                h3 {
+                    align-self: flex-end;
+                }
+
+
+            }
 
             h3 {
 

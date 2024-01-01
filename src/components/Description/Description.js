@@ -15,7 +15,7 @@ function Description({ selectedVideo }) {
         <h1 className="description__title">{selectedVideo.title}</h1>
         <div className="description__container">
           <div className="description__container--col1">
-            <h2>{selectedVideo.channel}</h2>
+            <h2>By {selectedVideo.channel}</h2>
             <h3>{formattedDate}</h3>
           </div>
           <div className="description__container--col2">
@@ -30,7 +30,7 @@ function Description({ selectedVideo }) {
           </div>
         </div>
         <p>{selectedVideo.description}</p>
-        <p>{selectedVideo.comments.length} comments</p>
+        <p className="boldy">{selectedVideo.comments.length} comments</p>
       </div>
     </>
   );

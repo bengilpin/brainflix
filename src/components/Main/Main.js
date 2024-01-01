@@ -27,18 +27,22 @@ function Main() {
     <div className="main-container">
       {selectedVideo && <Video selectedVideo={selectedVideo} />}
       <div className="desktop__container">
+        <div className="desktop__container--leftside">
         {selectedVideo && <Description selectedVideo={selectedVideo} />}
         {selectedVideo && <CommentsRender selectedVideo={selectedVideo} />}
-        <h3 className="video-thumbnails-section--h3">NEXT VIDEOS</h3>
-        {videoDetails
-          .filter((video) => video.id !== selectedVideo?.id)
-          .map((video) => (
-            <NextVideos
-              key={video.id}
-              video={video}
-              onSelectVideo={handleSelectVideo}
-            />
-          ))}
+        </div>
+        <div className="video-thumbail__container">
+          <h3 className="video-thumbnails-section--h3">NEXT VIDEOS</h3>
+          {videoDetails
+            .filter((video) => video.id !== selectedVideo?.id)
+            .map((video) => (
+              <NextVideos
+                key={video.id}
+                video={video}
+                onSelectVideo={handleSelectVideo}
+              />
+            ))}
+        </div>
       </div>
     </div>
   );
