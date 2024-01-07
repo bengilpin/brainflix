@@ -4,8 +4,8 @@ import profilePic from "../../assets/images/Images/Mohan-muruge.jpg";
 import Comments from "../Comments/Comments";
 import addCommentIcon from "../../assets/images/Icons/add_comment.svg";
 
-function CommentsRender({ selectedVideo }) {
-  const comments = selectedVideo ? selectedVideo.comments : [];
+function CommentsRender({ selectedVideoId }) {
+  const comments = selectedVideoId.comments;
 
   return (
     <>

@@ -1,52 +1,49 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 import "./Main.scss";
 import videoDetails from "../../data/video-details.json";
-import Video from "../Video/Video";
+import Video from "../VideoPage/VideoPage";
 import CommentsRender from "../CommentsRender/CommentsRender";
 import Description from "../Description/Description";
 import Header from "../Header/Header";
-
 import NextVideos from "../NextVideos/NextVideos";
+import { getMoviesEndpoint } from "../../utils/api-utils";
+import SelectedVideo from "../SelectedVideo/SelectedVideo";
 
 function Main() {
-  const [selectedVideo, setSelectedVideo] = useState(null);
+  const [videos, setVideos] = useState(null);
+  const { videoId } = useParams();
 
-  useEffect(() => {
-    if (
-      !selectedVideo ||
-      !videoDetails.find((video) => video.id === selectedVideo.id)
-    ) {
-      setSelectedVideo(videoDetails[0]);
+  const getVideos = async () => {
+    try {
+      let response = await axios.get(getMoviesEndpoint());
+      setVideos(response.data);
+    } catch (error) {
+      console.log("error: ", error);
     }
-  }, [selectedVideo]);
-
-  const handleSelectVideo = (video) => {
-    setSelectedVideo(video);
   };
 
+  useEffect(() => {
+    getVideos();
+  }, []);
+
+  if (videos === null) {
+
+    return <p>waiting for videos to load</p>
+  }
+
+  const selectedVideoId = videoId || videos[0].id;
+
+  const filteredVideos = videos.filter((video) => {
+    return selectedVideoId !== video.id;
+  });
   return (
     <>
       <Header />
       <div className="main-container">
-        {selectedVideo && <Video selectedVideo={selectedVideo} />}
-        <div className="desktop__container">
-          <div className="desktop__container--leftside">
-            {selectedVideo && <Description selectedVideo={selectedVideo} />}
-            {selectedVideo && <CommentsRender selectedVideo={selectedVideo} />}
-          </div>
-          <div className="video-thumbail__container">
-            <h3 className="video-thumbnails-section--h3">NEXT VIDEOS</h3>
-            {videoDetails
-              .filter((video) => video.id !== selectedVideo?.id)
-              .map((video) => (
-                <NextVideos
-                  key={video.id}
-                  video={video}
-                  onSelectVideo={handleSelectVideo}
-                />
-              ))}
-          </div>
-        </div>
+        <SelectedVideo selectedVideoId={selectedVideoId} />
+        <NextVideos filteredVideos={filteredVideos} />
       </div>
     </>
   );
