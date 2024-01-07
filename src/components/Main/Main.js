@@ -4,6 +4,7 @@ import videoDetails from "../../data/video-details.json";
 import Video from "../Video/Video";
 import CommentsRender from "../CommentsRender/CommentsRender";
 import Description from "../Description/Description";
+import Header from "../Header/Header";
 
 import NextVideos from "../NextVideos/NextVideos";
 
@@ -24,27 +25,30 @@ function Main() {
   };
 
   return (
-    <div className="main-container">
-      {selectedVideo && <Video selectedVideo={selectedVideo} />}
-      <div className="desktop__container">
-        <div className="desktop__container--leftside">
-        {selectedVideo && <Description selectedVideo={selectedVideo} />}
-        {selectedVideo && <CommentsRender selectedVideo={selectedVideo} />}
-        </div>
-        <div className="video-thumbail__container">
-          <h3 className="video-thumbnails-section--h3">NEXT VIDEOS</h3>
-          {videoDetails
-            .filter((video) => video.id !== selectedVideo?.id)
-            .map((video) => (
-              <NextVideos
-                key={video.id}
-                video={video}
-                onSelectVideo={handleSelectVideo}
-              />
-            ))}
+    <>
+      <Header />
+      <div className="main-container">
+        {selectedVideo && <Video selectedVideo={selectedVideo} />}
+        <div className="desktop__container">
+          <div className="desktop__container--leftside">
+            {selectedVideo && <Description selectedVideo={selectedVideo} />}
+            {selectedVideo && <CommentsRender selectedVideo={selectedVideo} />}
+          </div>
+          <div className="video-thumbail__container">
+            <h3 className="video-thumbnails-section--h3">NEXT VIDEOS</h3>
+            {videoDetails
+              .filter((video) => video.id !== selectedVideo?.id)
+              .map((video) => (
+                <NextVideos
+                  key={video.id}
+                  video={video}
+                  onSelectVideo={handleSelectVideo}
+                />
+              ))}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
