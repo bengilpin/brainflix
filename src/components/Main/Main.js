@@ -42,8 +42,8 @@ function Main() {
     <>
       <Header />
       <div className="main-container">
-        <SelectedVideo selectedVideoId={selectedVideoId} />
-        <NextVideos filteredVideos={filteredVideos} />
+        <SelectedVideo selectedVideoId={selectedVideoId} filteredVideos={filteredVideos} />
+        {/* <NextVideos filteredVideos={filteredVideos} /> */}
       </div>
     </>
   );

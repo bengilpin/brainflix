@@ -6,19 +6,24 @@ import { getMovieEndpoint } from "../../utils/api-utils";
 function NextVideos({ filteredVideos }) {
   return (
     <>
-      {filteredVideos.map((video) => {
-        return (
-          <div key={video.id} className="next-video">
+      <div className="next-video-section">
+        <h2 className="next-videos--h2">NEXT VIDEOS</h2>
+        {filteredVideos.map((video) => {
+          return (
             <Link to={`/${video.id}`}>
-              <img src={video.image} className="next-video__image"></img>
-              <div className="next-video__content">
-                <h2>{video.title}</h2>
-                <h3>{video.channel}</h3>
+              <div key={video.id} className="next-video">
+                <img src={video.image} className="next-video__image"></img>
+                <div className="next-video__content">
+                  <p className="next-video__content--title">{video.title}</p>
+                  <p className="next-video__content--channel">
+                    {video.channel}
+                  </p>
+                </div>
               </div>
             </Link>
-          </div>
-        );
-      })}
+          );
+        })}
+      </div>
     </>
   );
 }

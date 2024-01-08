@@ -8,7 +8,7 @@ import { useParams } from "react-router-dom";
 import NextVideos from "../NextVideos/NextVideos";
 import "./SelectedVideo.scss";
 
-function SelectedVideo({ selectedVideoId }) {
+function SelectedVideo({ selectedVideoId, filteredVideos }) {
   const [video, setVideo] = useState(null);
 
   const getSelectedVideo = async (videoId) => {
@@ -27,7 +27,7 @@ function SelectedVideo({ selectedVideoId }) {
   if (video === null) {
     return <p>still loading the video</p>;
   }
-  
+
   return (
     <>
       <div className="video-container">
@@ -35,8 +35,13 @@ function SelectedVideo({ selectedVideoId }) {
           Your browser doesn't support the video tag.
         </video>
       </div>
-      <Description selectedVideoId={video} />
-      <CommentsRender selectedVideoId={video} />
+      <div className="video-section">
+        <div className="video-section__col-left">
+          <Description selectedVideoId={video} />
+          <CommentsRender selectedVideoId={video} />
+        </div>
+        <NextVideos filteredVideos={filteredVideos} />
+      </div>
     </>
   );
 }

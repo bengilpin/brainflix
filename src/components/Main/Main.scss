@@ -1,16 +1,11 @@
 @import "../../styles//partials/fonts";
 @import "../../styles//partials/variables";
 
+.main-container {
 
-.video-thumbnails-section--h3 {
 
-    color: gray;
-    margin: 1rem;
-
-    @media (min-width: 48rem) {
-        margin: 2.25rem;
-    }
 }
+
 
 h1 {
 
@@ -87,24 +82,5 @@ button {
 
 }
 
-@media (min-width: 80rem) {
-    .desktop__container {
 
-        display: flex;
-
-        &--leftside {
-
-            width: 65vw;
-        }
-    }      
-    
-    .video-thumbail__container {
-
-        display: flex;
-        flex-direction: column;
-        border-left: .0625rem #f1f1f1 solid;
-        width: 35vw;
-        
-    }
-}
 

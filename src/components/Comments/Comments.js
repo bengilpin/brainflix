@@ -16,7 +16,7 @@ function Comments({ comment }) {
             <h3>{formattedDate}</h3>
           </div>
           <div className="comment-card__content--comment">
-            <p>{text}</p>
+            <p className="comment-card__content--comment-p">{text}</p>
           </div>
         </div>
       </div>

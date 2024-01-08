@@ -9,6 +9,7 @@ import Main from "./components/Main/Main";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import SelectedVideo from "./components/SelectedVideo/SelectedVideo";
+import UploadPage from "./pages/UploadPage/UploadPage";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Main />}></Route>
-          <Route path="/upload"></Route>
+          <Route path="/upload" element={<UploadPage />}></Route>
           <Route path="/:videoId" element={<Main />}></Route>
         </Routes>
       </BrowserRouter>
