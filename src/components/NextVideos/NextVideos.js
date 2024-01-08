@@ -1,7 +1,7 @@
 import React from "react";
 import "./NextVideos.scss";
 import { Link } from "react-router-dom";
-import { getMovieEndpoint } from "../../utils/api-utils";
+
 
 function NextVideos({ filteredVideos }) {
   return (
@@ -12,7 +12,7 @@ function NextVideos({ filteredVideos }) {
           return (
             <Link to={`/${video.id}`}>
               <div key={video.id} className="next-video">
-                <img src={video.image} className="next-video__image"></img>
+                <img alt={video.title} src={video.image} className="next-video__image"></img>
                 <div className="next-video__content">
                   <p className="next-video__content--title">{video.title}</p>
                   <p className="next-video__content--channel">

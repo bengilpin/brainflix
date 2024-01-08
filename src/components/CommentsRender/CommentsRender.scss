@@ -2,7 +2,6 @@
     display: flex;
     width: 100%;
     padding-bottom: 1rem;
-    // margin: 0rem 1rem 1rem 1rem;
     padding-right: 1rem;
 
     border-bottom: .0625rem #e1e1e1 solid;
@@ -11,13 +10,12 @@
 
         padding-bottom: 2.25rem;
         
-        // margin: 0rem 2.25rem 2.25rem 2.25rem;
-        // flex-grow: 1;
+
 
         @media (min-width: 80rem) {
             max-width: 100%;
             padding: 0rem 0rem 2rem 0;
-            // flex-grow: initial;
+            
         }
     }
 
@@ -84,8 +82,14 @@
                 height: 7.5rem;
                 width: 100%;
                 border-radius: .3125rem;
-                border: .0625rem #E1E1E1 solid;
+                border: 2px #E1E1E1 solid;
                 background-color: #FAFAFA;
+
+                &:focus {
+
+                    border-color: #0095FF;
+                    outline: none;
+                }
 
                 @media (min-width: 48rem) {
 

@@ -1,10 +1,8 @@
-import Video from "../VideoPage/VideoPage";
 import Description from "../Description/Description";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { getMovieEndpoint } from "../../utils/api-utils";
 import CommentsRender from "../CommentsRender/CommentsRender";
-import { useParams } from "react-router-dom";
 import NextVideos from "../NextVideos/NextVideos";
 import "./SelectedVideo.scss";
 

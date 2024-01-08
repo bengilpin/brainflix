@@ -1,34 +1,34 @@
 .upload-page {
 
-    margin: 16px;
+    margin: 1rem;
     display: flex;
     flex-direction: column;
 
-    @media (min-width: 768px) {
+    @media (min-width: 48rem) {
 
-        margin: 32px;
+        margin: 2rem;
 
-        @media (min-width: 1260px) {
+        @media (min-width: 78.75rem) {
 
-            margin: 64px 128px;
+            margin: 4rem 8rem;
         }
     }
 
     &__h1 {
 
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: .625rem;
+        margin-bottom: .625rem;
 
-        @media (min-width: 768px) {
+        @media (min-width: 48rem) {
 
-            border-bottom: 1px #E1E1E1 solid;
-            padding-bottom: 32px;
+            border-bottom: .0625rem #E1E1E1 solid;
+            padding-bottom: 2rem;
         }
     }
 
     &__thumbnail-container {
 
-        @media (min-width: 1280px) {
+        @media (min-width: 80rem) {
 
             display: flex;
             flex-direction: column;
@@ -38,14 +38,14 @@
         &--image {
 
             height: 12rem;
-            background-color: blue;
-            border-radius: 4px;
+            background-color: #E1E1E1;
+            border-radius: .25rem;
 
-            @media (min-width: 768px) {
+            @media (min-width: 48rem) {
 
                 width: 50%;
 
-                @media (min-width: 1260px) {
+                @media (min-width: 78.75rem) {
 
                     width: 100%;
                 }
@@ -58,9 +58,9 @@
             color: silver;
             font-weight: 500;
 
-            @media (min-width: 768px) {
+            @media (min-width: 48rem) {
 
-                margin-bottom: 8px;
+                margin-bottom: .5rem;
             }
         }
 
@@ -69,23 +69,23 @@
 
     &__title-container {
 
-        margin-top: 8px;
+        margin-top: .5rem;
 
         &--h3 {
 
             color: silver;
             font-weight: 500;
-            margin-bottom: 4px;
+            margin-bottom: .25rem;
         }
 
         &--input {
 
             width: 100%;
-            border-radius: 4px;
-            border: 1px #E1E1E1 solid;
+            border-radius: .25rem;
+            border: .0625rem #E1E1E1 solid;
             background-color: #FAFAFA;
-            height: 40px;
-            padding-left: 8px;
+            height: 2.5rem;
+            padding-left: .5rem;
         }
 
 
@@ -93,12 +93,12 @@
 
     &__description-container {
 
-        @media (min-width: 768px) {
+        @media (min-width: 48rem) {
 
-            border-bottom: 1px #E1E1E1 solid;
-            padding-bottom: 32px;
+            border-bottom: .0625rem #E1E1E1 solid;
+            padding-bottom: 2rem;
 
-            @media (min-width: 1260px) {
+            @media (min-width: 78.75rem) {
 
                 border: none;
             }
@@ -108,18 +108,18 @@
 
             color: silver;
             font-weight: 500;
-            margin-bottom: 4px;
+            margin-bottom: .25rem;
         }
 
         &--input {
 
             width: 100%;
-            height: 100px;
-            border-radius: 4px;
-            border: 1px #E1E1E1 solid;
+            height: 6.25rem;
+            border-radius: .25rem;
+            border: .0625rem #E1E1E1 solid;
             background-color: #FAFAFA;
-            padding-bottom: 66px;
-            padding-left: 8px;
+            padding-bottom: 4.125rem;
+            padding-left: .5rem;
         }
 
 
@@ -128,16 +128,16 @@
 
     &__button-container {
 
-        margin-top: 16px;
+        margin-top: 1rem;
         position: relative;
 
-        @media (min-width: 768px) {
+        @media (min-width: 48rem) {
             display: flex;
             flex-direction: row-reverse;
             margin-left: auto;
             width: 50%;
 
-            @media (min-width: 1260px) {
+            @media (min-width: 78.75rem) {
 
                 width: 30%;
             }
@@ -173,9 +173,9 @@
         border: none;
         height: 3rem;
         width: 100%;
-        margin-top: 32px;
+        margin-top: 2rem;
 
-        @media (min-width: 768px) {
+        @media (min-width: 48rem) {
 
             margin-top: 0;
         }
@@ -184,11 +184,11 @@
 
 .desktop_container {
 
-    @media (min-width: 1280px) {
+    @media (min-width: 80rem) {
 
         display: flex;
         align-items: baseline;
-        border-bottom: 1px #E1E1E1 solid;
+        border-bottom: .0625rem #E1E1E1 solid;
 
 
 
@@ -197,11 +197,11 @@
 
     &--right-side {
 
-        @media (min-width: 1280px) {
+        @media (min-width: 80rem) {
 
             display: flex;
             flex-direction: column;
-            margin-left: 64px;
+            margin-left: 4rem;
             width: 100%;
         }
 

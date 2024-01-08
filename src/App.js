@@ -1,14 +1,8 @@
 import React from "react";
 import "./App.scss";
-import Header from "./components/Header/Header";
-import Video from "./components/VideoPage/VideoPage";
-import Description from "./components/Description/Description";
-import Comments from "./components/Comments/Comments";
-import CommentsRender from "./components/CommentsRender/CommentsRender";
 import Main from "./components/Main/Main";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
-import SelectedVideo from "./components/SelectedVideo/SelectedVideo";
 import UploadPage from "./pages/UploadPage/UploadPage";
 
 function App() {
