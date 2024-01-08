@@ -1,21 +1,19 @@
 .comment-card {
 
     display: flex;
-
-    // margin: 1rem;
     padding-bottom: 1rem;
     border-bottom: .0625rem lightgray solid;
 
     @media (min-width: 48rem) {
 
-        padding: 2.25rem;
+        padding: 2.25rem 0;
 
         @media (min-width: 80rem) {
             padding: 1.75rem 2.25rem 2.25rem 0;
             width: 100%;
             margin-right: 0;
 
-            // flex-grow: 1;
+           
         }
     }
 

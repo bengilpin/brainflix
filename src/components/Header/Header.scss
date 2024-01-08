@@ -7,6 +7,7 @@
     align-items: center;
     margin-top: 1rem;
     padding-bottom: 1rem;
+    border-bottom: 1px #E1E1E1 solid;
 
     @media (min-width: 48rem) {
 
@@ -49,7 +50,7 @@
         width: 100vw;
         overflow: visible;
         padding-left: 1rem;
-        padding-right: 1rem;
+        // padding-right: 1rem;
 
         @media (min-width: 48rem) {
 
@@ -134,6 +135,11 @@
                     width: 100%;
                     height: 2.5rem;
                     color: white;
+
+                    &:hover {
+
+                        background-color: #0065AD;
+                    }
 
 
 
