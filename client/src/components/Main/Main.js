@@ -24,7 +24,7 @@ function Main() {
   }, []);
 
   if (videos === null) {
-    return <p>waiting for videos to load</p>;
+    return <p>waiting for  videos to load</p>;
   }
 
   const selectedVideoId = videoId || videos[0].id;
