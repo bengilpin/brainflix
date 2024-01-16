@@ -6,9 +6,9 @@ const port = 8080;
 const videoRoutes = require("./routes/videoRoutes");
 
 app.use(cors());
-// app.use(express.static("public"));
-// app.use((req, res, next) => {});
+app.use('/images', express.static('images'));
 
+app.use(express.json());
 app.use("/", videoRoutes);
 
 app.listen(port, () => {
